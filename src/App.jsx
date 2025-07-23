@@ -8,12 +8,14 @@ import ImageModal from "./components/modal/ImageModal";
 import ImageGallery from "./components/Images/ImageGallery";
 import ModalGetComponent from "./components/modal/ModalGetComponent";
 import { useState } from "react";
+import FadeInOverlay from "./components/Images/FadeInOverlay";
+import SlideLeftOverlay from "./components/Images/SlideLeftOverlay";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleOpen = (is) => {
-    setIsOpen(is);
-  };
+  //   const [isOpen, setIsOpen] = useState(false);
+  //   const handleOpen = (is) => {
+  //     setIsOpen(is);
+  //   };
 
   return (
     <div className="bg-cyan-950 text-amber-200 h-full min-h-screen">
@@ -30,7 +32,7 @@ function App() {
       {/* <HoverDropDown /> */}
       {/* <SideBarPushWithOpacity /> */}
       {/* <ImageModal /> */}
-      <button
+      {/* <button
         className="border px-4 py-3 mx-10 my-4 rounded-lg hover:bg-amber-200 hover:text-black"
         onClick={() => setIsOpen(true)}
       >
@@ -38,8 +40,10 @@ function App() {
       </button>
       <ModalGetComponent isOpen={isOpen} handleOpen={handleOpen}>
         <ImageGallery />
-      </ModalGetComponent>
+      </ModalGetComponent> */}
       {/* <ImageGallery /> */}
+      {/* <FadeInOverlay /> */}
+      <SlideLeftOverlay />
     </div>
   );
 }
