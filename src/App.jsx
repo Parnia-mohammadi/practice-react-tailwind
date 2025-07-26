@@ -10,6 +10,9 @@ import ModalGetComponent from "./components/modal/ModalGetComponent";
 import { useState } from "react";
 import FadeInOverlay from "./components/Images/FadeInOverlay";
 import SlideLeftOverlay from "./components/Images/SlideLeftOverlay";
+import ResponsiveNavbar from "./components/NavBar/ResponsiveNavbar";
+import FullscreenOverlayNavigation from "./components/Overlay/FullscreenOverlayNavigation";
+import PopUp from "./components/PopUp/PopUp";
 
 function App() {
   //   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +46,10 @@ function App() {
       </ModalGetComponent> */}
       {/* <ImageGallery /> */}
       {/* <FadeInOverlay /> */}
-      <SlideLeftOverlay />
+      {/* <SlideLeftOverlay /> */}
+      {/* <ResponsiveNavbar /> */}
+      {/* <FullscreenOverlayNavigation /> */}
+      <PopUp />
     </div>
   );
 }
