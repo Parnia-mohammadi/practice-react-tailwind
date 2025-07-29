@@ -13,6 +13,12 @@ import SlideLeftOverlay from "./components/Images/SlideLeftOverlay";
 import ResponsiveNavbar from "./components/NavBar/ResponsiveNavbar";
 import FullscreenOverlayNavigation from "./components/Overlay/FullscreenOverlayNavigation";
 import PopUp from "./components/PopUp/PopUp";
+import Loader from "./components/Loader/Loader";
+import ProgressBar from "./components/Progress/ProgressBar";
+import AnimatedButtonPressedEffect from "./components/Buttons/AnimatedButtonPressedEffect";
+import AnimatedButtonChangeText from "./components/Buttons/AnimatedButtonChangeText";
+import AnimatedButtonRippleEffect from "./components/Buttons/AnimatedButtonRippleEffect";
+import MenuIcon from "./components/menus/MenuIcon";
 
 function App() {
   //   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +55,13 @@ function App() {
       {/* <SlideLeftOverlay /> */}
       {/* <ResponsiveNavbar /> */}
       {/* <FullscreenOverlayNavigation /> */}
-      <PopUp />
+      {/* <PopUp /> */}
+      {/* <Loader /> */}
+      {/* <ProgressBar /> */}
+      {/* <AnimatedButtonPressedEffect /> */}
+      {/* <AnimatedButtonChangeText /> */}
+      {/* <AnimatedButtonRippleEffect /> */}
+      <MenuIcon />
     </div>
   );
 }
