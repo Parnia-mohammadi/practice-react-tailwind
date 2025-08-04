@@ -17,8 +17,8 @@ import Loader from "./components/Loader/Loader";
 import ProgressBar from "./components/Progress/ProgressBar";
 import AnimatedButtonPressedEffect from "./components/Buttons/AnimatedButtonPressedEffect";
 import AnimatedButtonChangeText from "./components/Buttons/AnimatedButtonChangeText";
-import AnimatedButtonRippleEffect from "./components/Buttons/AnimatedButtonRippleEffect";
 import MenuIcon from "./components/menus/MenuIcon";
+import ToggleSwitch from "./components/Toggle/ToggleSwitch";
 
 function App() {
   //   const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +61,8 @@ function App() {
       {/* <AnimatedButtonPressedEffect /> */}
       {/* <AnimatedButtonChangeText /> */}
       {/* <AnimatedButtonRippleEffect /> */}
-      <MenuIcon />
+      {/* <MenuIcon /> */}
+      <ToggleSwitch />
     </div>
   );
 }
