@@ -19,6 +19,7 @@ import AnimatedButtonPressedEffect from "./components/Buttons/AnimatedButtonPres
 import AnimatedButtonChangeText from "./components/Buttons/AnimatedButtonChangeText";
 import MenuIcon from "./components/menus/MenuIcon";
 import ToggleSwitch from "./components/Toggle/ToggleSwitch";
+import SearchFilterList from "./components/Search/SearchFilterList";
 
 function App() {
   //   const [isOpen, setIsOpen] = useState(false);
@@ -62,7 +63,8 @@ function App() {
       {/* <AnimatedButtonChangeText /> */}
       {/* <AnimatedButtonRippleEffect /> */}
       {/* <MenuIcon /> */}
-      <ToggleSwitch />
+      {/* <ToggleSwitch /> */}
+      <SearchFilterList />
     </div>
   );
 }
