@@ -2,18 +2,20 @@ import { X } from "lucide-react";
 import { Component, useRef, useState } from "react";
 import useOutsideClick from "../../hooks/outsideClick";
 
-function ModalGetComponent({ children, isOpen, handleOpen }) {
+function ModalGetComponent({ children, isOpen, handleOpen, backdropStyle }) {
   const wrapperRef = useRef();
   useOutsideClick(wrapperRef, "modalContent", () => handleOpen(false));
 
   return (
     <div
-      className={`bg-amber-100/30 fixed top-0 left-0 h-screen transition-all duration-1000 ease-in-out overflow-hidden ${
+      className={`${backdropStyle} fixed top-0 left-0 h-screen transition-all duration-1000 ease-in-out overflow-hidden ${
         isOpen ? "w-full opacity-100" : "w-0 opacity-0"
       }`}
     >
       <button
-        className="text-black fixed top-8 right-8"
+        className={`text-black fixed top-8 transition-all duration-1000 ease-in-out hover:scale-125 ${
+          isOpen ? "left-11/12" : "left-0"
+        }`}
         onClick={() => handleOpen(false)}
       >
         <X size={30} />
@@ -21,7 +23,7 @@ function ModalGetComponent({ children, isOpen, handleOpen }) {
       <div
         id="modalContent"
         ref={wrapperRef}
-        className="absolute left-1/2 top-1/2 -translate-1/2 bg-black rounded-2xl"
+        className="absolute left-1/2 top-1/2 -translate-1/2 bg-black rounded-2xl w-2/3"
       >
         {children}
       </div>

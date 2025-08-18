@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Modal() {
+function Modal({ header, children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ function Modal() {
           className={`w-1/2 h-1/2 left-1/2 top-1/2 text-black border overflow-hidden translate-1/2 bg-amber-400 p-10 rounded-2xl `}
         >
           <div className=" flex justify-between items-center pb-2 mb-2 border-b font-semibold">
-            <p>Header</p>
+            <p>{header}</p>
             <button
               onClick={() => setIsOpen(false)}
               className="text-xl font-semibold hover:scale-125"
@@ -30,7 +30,7 @@ function Modal() {
               x
             </button>
           </div>
-          Modal
+          {children}
         </div>
       </div>
     </div>

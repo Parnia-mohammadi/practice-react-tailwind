@@ -25,13 +25,18 @@ import CustomSelect from "./components/Select/CustomSelect";
 import ProfileCard from "./components/Cards/ProfileCard";
 import LongParagraph from "./components/Scroll/LongParagraph";
 import ScrollIndicator from "./components/Scroll/ScrollIndicator";
-import ImageZoom from "./components/Images/ImageZoom";
+import ImageZoomWithLenz from "./components/Images/ImageZoomWithLenz";
+import ContactChip from "./components/Chip/ContactChip";
+import HoverableSideNavigation from "./components/SideBar/HoverableSideNavigation";
+import CopyTextToClipboard from "./components/Buttons/CopyTextToClipboard";
+import StarRate from "./components/Rating/StarRate";
+import FullscreenSearch from "./components/Search/FullscreenSearch";
 
 function App() {
-  //   const [isOpen, setIsOpen] = useState(false);
-  //   const handleOpen = (is) => {
-  //     setIsOpen(is);
-  //   };
+  const [isOpen, setIsOpen] = useState(false);
+  const handleOpen = (is) => {
+    setIsOpen(is);
+  };
 
   return (
     <div className="bg-cyan-950 text-amber-200 h-full min-h-screen pb-10">
@@ -76,7 +81,35 @@ function App() {
       {/* <CustomSelect /> */}
       {/* <ProfileCard /> */}
       {/* <LongParagraph /> */}
-      <ImageZoom src={"/img_lights.jpg"} zoom={8}/>
+      <ImageZoomWithLenz
+        src={"/img_girl.jpg"}
+        zoom={8}
+        shape="circle"
+        lensSize={100}
+      />
+      {/* <button
+        onClick={() => handleOpen(true)}
+        className="bg-amber-300 text-cyan-950 px-4 py-2 rounded-xl m-10"
+      >
+        open ContactChip
+      </button>
+      <ContactChip isOpen={isOpen} onOpen={handleOpen} /> */}
+      {/* <HoverableSideNavigation /> */}
+      {/* <CopyTextToClipboard /> */}
+      {/* <StarRate totalStars={5} /> */}
+      {/* <button
+        onClick={() => handleOpen(true)}
+        className="bg-amber-300 text-cyan-950 px-4 py-2 rounded-xl m-10"
+      >
+        open search
+      </button>
+      <ModalGetComponent
+        isOpen={isOpen}
+        handleOpen={handleOpen}
+        backdropStyle="bg-amber-300/40"
+      >
+        <FullscreenSearch />
+      </ModalGetComponent> */}
     </div>
   );
 }
